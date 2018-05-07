@@ -25,9 +25,9 @@ class UsersController extends Controller
                 'email'=>$request->email,
                 'password'=>bcrypt($request->password)
             ]);
-            echo "<pre>";
-            var_dump($user);
-            exit;
+//            echo "<pre>";
+//            var_dump($user);
+//            exit;
             session()->flash('success','欢迎');
             return redirect()->route('users.show',[$user]);
     }
